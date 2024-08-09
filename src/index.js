@@ -1,13 +1,14 @@
 import _ from 'lodash';
 import './styles/main.scss';
 
-function component() {
-    const element = document.createElement('h1');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+document.addEventListener('DOMContentLoaded', function() {
+    const titlesExpand = document.querySelectorAll('.title');
+    
+    titlesExpand.forEach(function(title){
+        title.addEventListener('click', function() {
+            const projectContainer = title.closest('.project-detail');
+            const projectDesc = projectContainer.querySelector('#project-desc');
+            projectDesc.classList.toggle('expanded');
+        });
+    });
+});

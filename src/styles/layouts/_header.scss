@@ -1,0 +1,13 @@
+header {
+    grid-area: header;
+    display: flex;
+    justify-content: end;
+    border-bottom: solid 2px var(--color-primary);
+    // padding: var(--space-s);
+    padding-bottom: var(--space-s);
+    padding-top: var(--space-l);
+    padding-left: var(--space-l);
+    background-color: var(--color-secondary-bg);
+    margin-right: var(--space-l);
+    margin-left: var(--space-l);
+}
