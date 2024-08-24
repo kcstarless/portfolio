@@ -2,12 +2,17 @@ import _ from 'lodash';
 import './styles/main.scss';
 
 document.addEventListener('DOMContentLoaded', function() {
-    const titlesExpand = document.querySelectorAll('.title');
+    const projectCard = document.querySelectorAll('.project-card');
     
-    titlesExpand.forEach(function(title){
-        title.addEventListener('click', function() {
-            const projectContainer = title.closest('.project-detail');
-            const projectDesc = projectContainer.querySelector('#project-desc');
+    projectCard.forEach(function(project){
+        project.addEventListener('mouseover', function() {
+            // const projectContainer = project.closest('.project-detail');
+            const projectDesc = project.querySelector('.project-desc');
+            projectDesc.classList.toggle('expanded');
+        });
+
+        project.addEventListener('mouseout', function() {
+            const projectDesc = project.querySelector('.project-desc');
             projectDesc.classList.toggle('expanded');
         });
     });

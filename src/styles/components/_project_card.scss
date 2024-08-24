@@ -11,13 +11,37 @@
         }
     }
 
-    .project-image {
+    .project-image.weather{
         width: auto;
         height: 200px;
         border: var(--border-light);
         background-image: url('../assets/images/project_weather.png');
         background-size: cover; /* Ensures the image covers the entire container */
         background-position: center; /* Centers the image within the container */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        filter: grayscale(100%); /* Applies greyscale filter by default */
+        transition: filter 0.5s ease; /* Smooth transition for the filter effect */
+    }
+
+    .project-image.battleship{
+        width: auto;
+        height: 200px;
+        border: var(--border-light);
+        background-image: url('../assets/images/project_battleship.png');
+        background-size: cover; /* Ensures the image covers the entire container */
+        background-position: center; /* Centers the image within the container */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        filter: grayscale(100%); /* Applies greyscale filter by default */
+        transition: filter 0.5s ease; /* Smooth transition for the filter effect */
+    }
+
+    .project-image.odinbook{
+        width: auto;
+        height: 200px;
+        border: var(--border-light);
+        background-image: url('../assets/images/project_odinbook.png');
+        background-size: cover; /* Ensures the image covers the entire container */
+        background-position: top; /* Centers the image within the container */
         background-repeat: no-repeat; /* Prevents the image from repeating */
         filter: grayscale(100%); /* Applies greyscale filter by default */
         transition: filter 0.5s ease; /* Smooth transition for the filter effect */
