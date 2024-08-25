@@ -11,40 +11,28 @@
         }
     }
 
-    .project-image.weather{
+    .project-image {
         width: auto;
         height: 200px;
         border: var(--border-light);
-        background-image: url('../assets/images/project_weather.png');
         background-size: cover; /* Ensures the image covers the entire container */
         background-position: center; /* Centers the image within the container */
         background-repeat: no-repeat; /* Prevents the image from repeating */
         filter: grayscale(100%); /* Applies greyscale filter by default */
         transition: filter 0.5s ease; /* Smooth transition for the filter effect */
-    }
 
-    .project-image.battleship{
-        width: auto;
-        height: 200px;
-        border: var(--border-light);
-        background-image: url('../assets/images/project_battleship.png');
-        background-size: cover; /* Ensures the image covers the entire container */
-        background-position: center; /* Centers the image within the container */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        filter: grayscale(100%); /* Applies greyscale filter by default */
-        transition: filter 0.5s ease; /* Smooth transition for the filter effect */
-    }
-
-    .project-image.odinbook{
-        width: auto;
-        height: 200px;
-        border: var(--border-light);
-        background-image: url('../assets/images/project_odinbook.png');
-        background-size: cover; /* Ensures the image covers the entire container */
-        background-position: top; /* Centers the image within the container */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        filter: grayscale(100%); /* Applies greyscale filter by default */
-        transition: filter 0.5s ease; /* Smooth transition for the filter effect */
+        &.cv{
+            background-image: url('../assets/images/project_cvcreator.png');
+        }
+        &.weather {
+            background-image: url('../assets/images/project_weather.png');
+        }
+        &.battleship {
+            background-image: url('../assets/images/project_battleship.png');
+        }
+        &.odinbook {
+            background-image: url('../assets/images/project_odinbook.png');
+        }
     }
 
     .project-detail {
@@ -75,7 +63,7 @@
             padding-top: var(--space-m);
             max-height: 0;
             overflow: hidden;
-            opacity: 0;
+            // opacity: 0;
             transition: max-height 1.5s ease, opacity 0.7s ease;
 
             .link {
@@ -91,13 +79,13 @@
             // padding-bottom: var(--space-l);
             max-height: 500px; /* Adjust as needed */
             opacity: 1;
-            // transition: max-height 1.5s ease, opacity 0.7s ease;
+            transition: max-height 3s ease, opacity 0.7s ease;
         }
     }
 
     &:hover {
         .project-image {
-            filter: grayscale(0%) contrast(120%) saturate(120%);
+            filter: grayscale(0%) contrast(110%) saturate(110%);
         }
         
         .project-detail {
