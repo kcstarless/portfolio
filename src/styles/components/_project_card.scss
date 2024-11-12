@@ -1,0 +1,114 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxxs);
+
+    .project-no {
+        align-self: end;
+        
+        h3 {
+            color: var(--color-text-link);
+        }
+    }
+
+    .project-image {
+        width: auto;
+        height: 200px;
+        border: var(--border-light);
+        background-size: cover; /* Ensures the image covers the entire container */
+        background-position: center; /* Centers the image within the container */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        filter: grayscale(100%); /* Applies greyscale filter by default */
+        transition: filter 0.5s ease; /* Smooth transition for the filter effect */
+
+        &.cv{
+            background-image: url('../assets/images/project_cvcreator.png');
+        }
+        &.weather {
+            background-image: url('../assets/images/project_weather.png');
+        }
+        &.battleship {
+            background-image: url('../assets/images/project_battleship.png');
+        }
+        &.odinbook {
+            background-image: url('../assets/images/project_odinbook.png');
+        }
+        &.flyaway {
+            background-image: url('../assets/images/project_flyaway.png');
+        }
+    }
+
+    .project-detail {
+        display: flex;
+        flex-direction: column;
+
+        .project-title {
+            color: var(--color-text-link);
+            display:flex;
+            justify-content: space-between;
+            font-size: var(--font-size-m);
+            font-weight: bold;
+            
+            .tech {
+                display: flex;
+                gap: var(--space-xxxs);
+            }
+            .title {
+                cursor: pointer;
+            }
+        }
+
+
+        .project-desc {
+            display: flex;
+            flex-direction: column;
+            font-size: var(--font-size-s);
+            padding-top: var(--space-m);
+            max-height: 0;
+            overflow: hidden;
+            // opacity: 0;
+            transition: max-height 1.5s ease, opacity 0.7s ease;
+
+            .link {
+                display: flex;
+                align-items: center;
+                gap: var(--space-xxs);
+                align-self: end;
+                padding-bottom: var(--space-m);
+            }
+        }
+
+        .project-desc.expanded {
+            // padding-bottom: var(--space-l);
+            max-height: 500px; /* Adjust as needed */
+            opacity: 1;
+            transition: max-height 3s ease, opacity 0.7s ease;
+        }
+    }
+
+    &:hover {
+        .project-image {
+            filter: grayscale(0%) contrast(110%) saturate(110%);
+        }
+        
+        .project-detail {
+            opacity: 1; /* Show content on hover */
+            .project-title{
+                .tech-icon {
+                    filter: grayscale(0%) contrast(120%) saturate(120%);
+                }
+            }
+        }
+    }
+
+    .link-arrow {
+        color: var(--color-primary);
+        font-size: var(--font-size-xl);
+    }
+    .tech-icon {
+        width: 20px;
+        height: 20px;
+        transition: filter 0.5s ease; /* Smooth transition for the filter effect */
+        filter: grayscale(100%); /* Applies greyscale filter by default */        
+    }
+}

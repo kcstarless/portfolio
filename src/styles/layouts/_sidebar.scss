@@ -1,0 +1,58 @@
+.sidebar {
+    // border: var(--border-dark);
+    grid-area: sidebar;
+    padding-top: var(--space-l);
+    padding-left: var(--space-l);
+    background-color: var(--color-secondary-bg);
+
+    height: 100%;
+  // Proifle 
+  .profile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    
+    .profile-title {
+      // padding-bottom: var(--space-);
+    }
+
+    .profile-img {
+      object-fit: cover;
+    }
+    
+    .profile-details {
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      font-size: var(--font-size-s);      
+      .role {
+        padding-top: var(--space-m);
+        padding-bottom: var(--space-s);
+      }
+      h4 {
+        color: var(--color-primary);
+      }
+
+    }
+
+    .profile-skills {
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      font-size: var(--font-size-s);
+      color: var(--color-text-link);
+
+      .skill-set {
+        display: flex;
+        align-items: center;
+        gap: var(--space-s);
+      }
+    }
+  }
+
+  .link-arrow {
+    color: var(--color-primary);
+    font-size: var(--font-size-xl);
+}
+
+}

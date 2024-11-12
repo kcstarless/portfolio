@@ -1,0 +1,41 @@
+footer {
+    // border: var(--border-dark);
+    grid-area: footer;
+    // margin: var(--space-s);
+    padding: var(--space-xl);
+    // border-radius: var(--border-radius);
+    background-color: var(--color-secondary-bg);
+    display: flex;
+    justify-content: end;
+
+    .author-name {
+        color: var(--color-text-body);
+        font-weight: bold;
+    }
+
+    .author-icon {
+      vertical-align: middle;
+      display: inline-block;
+      padding-right: var(--space-s);
+    }
+    .footer_author a {
+      position: relative; /* Ensure the link is positioned */
+      display: inline-block; /* Ensure the link behaves as a block element */
+      color: var(--color-primary);
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .footer_author a::before {
+      content: url(../assets/images/icon_author_rotate.png);
+      position: absolute;
+      opacity: 0;
+      transform: rotateZ(180deg); /* Initial rotation state */
+      transition: opacity 0.3s ease, transform 2s ease; /* Smooth transition */
+    }
+  
+    .footer_author a:hover::before {
+      opacity: 1;
+      transform: rotateY(0deg); /* Rotate back to original state on hover */
+    }
+  }
